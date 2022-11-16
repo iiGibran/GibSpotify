@@ -4,29 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldenSpoty
+namespace GibranSpotivy
 {
     internal class SongCollaction 
     {
         public string Title { get; set; }
-        private List<iPlayable> playables;
+        protected List<iPlayable> playables;
 
 
         // consturct method
         public SongCollaction(string name)
         {
-
+            this.Title = name;
         }
 
-        public SongCollaction()
+
+        public List<iPlayable> ShowPlayables()
         {
-
+            foreach (iPlayable playable in playables)
+            {
+                Console.WriteLine(playable);
+            }   
+            return this.playables;
         }
 
-        public void ShowPlayables()
+        public void Play()
         {
-
+            foreach (iPlayable playable in playables)
+            {
+                Console.WriteLine(playable);
+            }
         }
+
 
         // ShowPlayables : List<iPlayable>
 

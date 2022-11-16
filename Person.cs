@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldenSpoty
+namespace GibranSpotivy
 {
     internal class Person
     {
         public string Name { get; set; }
-        private List<Person> Friends = new List<Person>();
-        private List<PlayList> PlayList = new List<PlayList>();
+        protected List<Person> Friends = new List<Person>();
+        protected List<PlayList> PlayList = new List<PlayList>();
 
 
 
@@ -19,14 +19,43 @@ namespace GoldenSpoty
             this.Name = name;
         }
 
-        public void ShowFriends(List<Person> person)
+
+        
+        public List<Person> ShowFriends()
         {
+            if (Friends.Count != 0)
+            {
+                foreach (Person friend in Friends)
+                {
+                    Console.WriteLine(friend.Name);
+                    //return Friends;
+                }
+            }
+            else
+            {
+                Console.WriteLine(Friends + "This user doesnt have friends");
+            }
+           
+            return Friends;
 
         }
-        
+
         public void ShowPlayLists(List<PlayList> playlist)
         {
+            if (playlist.Count != 0)
+            {
+                foreach (PlayList perPlay in playlist)
+                {
+                    Console.WriteLine(perPlay);
+                    //return Friends;
+                }
+            }
+            else
+            {
+                Console.WriteLine(Friends + "This user doesnt have friends");
+            }
 
+            //return playlist;
         }
 
         public void selectPlayList(int songNum)

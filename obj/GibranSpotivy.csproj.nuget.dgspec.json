@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GoldenSpoty.csproj": {}
+    "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GibranSpotivy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GoldenSpoty.csproj": {
+    "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GibranSpotivy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GoldenSpoty.csproj",
-        "projectName": "GoldenSpoty",
-        "projectPath": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GoldenSpoty.csproj",
+        "projectUniqueName": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GibranSpotivy.csproj",
+        "projectName": "GibranSpotivy",
+        "projectPath": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GibranSpotivy.csproj",
         "packagesPath": "C:\\Users\\Gibran\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\obj\\",
         "projectStyle": "PackageReference",

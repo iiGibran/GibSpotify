@@ -4,40 +4,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldenSpoty
+namespace GibranSpotivy
 {
+    public enum Genre
+    {
+        Pop,
+        Rock,
+        Hip_Hop,
+        Rap,
+        Country,
+        Folk,
+        Jazz,
+        Heavy_Metal,
+        Disco,
+        Classical,
+        Techno,
+        Indie_Rock,
+        Psychedelic_Rock
+    }
     internal class Song
     {
         public String Title { get; set; }
-        public List<Artist> Artist;
-        public enum SongGenre
-        {
-            Pop,
-            Rock,
-            Hip_Hop,
-            Rap,
-            Country,
-            Folk,
-            Jazz,
-            Heavy_Metal,
-            Disco,
-            Classical,
-            Techno,
-            Indie_Rock,
-            Psychedelic_Rock
-        }
+        public List<Artist> Artists;
+        public Genre Genre;
+        
         private int Lenght { get; set; }
 
-        public Song(string title, List<Artist> Artist, int lenght) // class Genre
+        public Song(string title, List<Artist> artists, int lenght, int genre) // class Genre
         {
-            Title = title;
-            this.Artist = Artist;
-            Lenght = lenght;
+            this.Title = title;
+            this.Artists = artists;
+            this.Lenght = lenght / 60;
+            this.Genre = (Genre)genre;
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            List<string> artistsStringList = new List<string>();
+            foreach (Artist artist in this.Artists)
+            {
+                artistsStringList.Add(artist.name);
+            }
+
+
+            string splitArtistNames = string.Join(" - ", artistsStringList);
+
+            return "------------------------\nTitle: " + this.Title + "\n" +
+                 "Artist: " + splitArtistNames + "\n" +
+                 "Genre: " + this.Genre + "\n" +
+                 "Length: " + this.Lenght + "\n";
         }
+
     }
 }

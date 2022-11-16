@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldenSpoty
+namespace GibranSpotivy
 {
     internal class Client
     {
@@ -40,6 +40,10 @@ namespace GoldenSpoty
         {
 
 
+            foreach (Album album in AllAlbums)
+            {
+                Console.WriteLine(album.Title);
+            }
 
         }
 
@@ -49,7 +53,7 @@ namespace GoldenSpoty
         public void SelectAlbum(int num)
         {
 
-
+            AllAlbums.ElementAt(num);
 
         }
 
@@ -59,7 +63,10 @@ namespace GoldenSpoty
         public void ShowAllSongs()
         {
 
-
+            foreach (Song song in AllSongs)
+            {
+                Console.WriteLine(song.Title);
+            }
 
         }
 
@@ -69,7 +76,7 @@ namespace GoldenSpoty
         public void SelectSong(int num)
         {
 
-
+            AllSongs.ElementAt(num);
 
         }
 
@@ -80,7 +87,10 @@ namespace GoldenSpoty
         {
 
 
-
+            foreach (Person person in AllUsers)
+            {
+                Console.WriteLine(person.Name);
+            }
         }
 
 
@@ -89,7 +99,7 @@ namespace GoldenSpoty
         public void SelectUser(int num)
         {
 
-
+            AllUsers.ElementAt(num);
 
         }
 
@@ -98,7 +108,8 @@ namespace GoldenSpoty
         // Toon alle bestaande afspeellijsten van een gebruiker binnen de client
         public void ShowUserPlaylists()
         {
-
+            //ActiveUser.ShowPlayLists(ActiveUser);
+            
 
 
         }
@@ -109,7 +120,7 @@ namespace GoldenSpoty
         public void SelectUserPlaylist(int num)
         {
 
-
+            ActiveUser.selectPlayList(num); 
 
         }
 
@@ -120,6 +131,7 @@ namespace GoldenSpoty
         {
 
 
+            CrurentlyPlaying.Play();
 
         }
 
@@ -128,9 +140,7 @@ namespace GoldenSpoty
         // Pauzeer de huidig geselecteerde iPlayable
         public void Pause()
         {
-
-
-
+            CrurentlyPlaying.Pause();
         }
 
 
@@ -138,9 +148,7 @@ namespace GoldenSpoty
         // Stop de huidige geselecteerde iPlayable
         public void Stop()
         {
-
-
-
+            CrurentlyPlaying.Stop();
         }
 
 
@@ -149,7 +157,7 @@ namespace GoldenSpoty
         public void Next()
         {
 
-
+            CrurentlyPlaying.Next();
 
         }
 
@@ -158,9 +166,7 @@ namespace GoldenSpoty
         // Zet shuffle aan/uit
         public void SetShuffle()
         {
-
-
-
+            shuffle = true;
         }
 
 
@@ -168,9 +174,7 @@ namespace GoldenSpoty
         // Zet repeat aan/uit
         public void SetRepeat()
         {
-
-
-
+            Repeat = true;
         }
 
 
@@ -179,7 +183,9 @@ namespace GoldenSpoty
         public void CreatePlaylist(string name)
         {
 
-
+            //PlayList(Person wessam, name);
+            PlayList playL =  new PlayList(ActiveUser, name);
+            //playL.Add();
 
         }
 
@@ -198,8 +204,10 @@ namespace GoldenSpoty
         // Selecteer een bestaande afspeellijst van de actieve gebruiker
         public void SelectPlaylist(int num)
         {
+            //PlayList[num];
+            //Console.WriteLine(PlayList[num]);
 
-
+            ActiveUser.selectPlayList(num);
 
         }
 
@@ -208,9 +216,7 @@ namespace GoldenSpoty
         // Verwijder een bestaande afspeellijst van de actieve gebruiker
         public void RemovePlaylist(int num)
         {
-
-
-
+            ActiveUser.RemovePlayList(num);
         }
 
 
@@ -218,9 +224,7 @@ namespace GoldenSpoty
         // Toon alle bestaande nummers binnen de huidig geselecteerde afspeellijst
         public void ShowSongsInPlaylist()
         {
-
-
-
+            //AllSongs.
         }
 
 
@@ -228,9 +232,7 @@ namespace GoldenSpoty
         // Voeg een nieuwe iPlayable toe aan de huidig geselecteerde afspeellijst
         public void AddToPlaylist(int num)
         {
-
-
-
+            
         }
 
 
@@ -248,9 +250,7 @@ namespace GoldenSpoty
         // Toon alle vrienden van de actieve gebruiker
         public void ShowFriends()
         {
-
-
-
+            ActiveUser.ShowFriends();
         }
 
 
@@ -260,6 +260,9 @@ namespace GoldenSpoty
         {
 
 
+            //AllUsers.ElementAt(AllUsers - 1);
+            
+            //return frie;
 
         }
 
@@ -268,6 +271,10 @@ namespace GoldenSpoty
         // Voeg een bestaande gebruiker toe aan de vriendenlijst van de actieve gebruiker
         public void AddFriends(int num)
         {
+            //int ajs = this.SelectFriend();
+            //ActiveUser.AddFriend(num);
+            //num = Convert.ToInt32(SelectFriend(num));
+            //ActiveUser.AddFriend(num);
 
 
 
@@ -279,7 +286,8 @@ namespace GoldenSpoty
         public void RemoveFriend(int num)
         {
 
-
+            Person selectedUser = AllUsers.ElementAt(num);
+            ActiveUser.RemoveFriend(selectedUser);
 
         }
 

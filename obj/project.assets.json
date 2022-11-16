@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\GoldenLap\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Gibran\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\GoldenLap\\Desktop\\school\\C#\\GoldenSpoty\\GoldenSpoty\\GoldenSpoty.csproj",
-      "projectName": "GoldenSpoty",
-      "projectPath": "D:\\Users\\GoldenLap\\Desktop\\school\\C#\\GoldenSpoty\\GoldenSpoty\\GoldenSpoty.csproj",
-      "packagesPath": "C:\\Users\\GoldenLap\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\GoldenLap\\Desktop\\school\\C#\\GoldenSpoty\\GoldenSpoty\\obj\\",
+      "projectUniqueName": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GibranSpotivy.csproj",
+      "projectName": "GibranSpotivy",
+      "projectPath": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\GibranSpotivy.csproj",
+      "packagesPath": "C:\\Users\\Gibran\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gibran\\Desktop\\Spotify\\GoldenSpoty\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\GoldenLap\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Gibran\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -65,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

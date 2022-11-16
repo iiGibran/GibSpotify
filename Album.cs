@@ -4,21 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldenSpoty
+namespace GibranSpotivy
 {
     internal class Album : SongCollaction
     {
 
-        private List<Artist> Artists;
+        protected List<Artist> Artists;
 
-        public Album(List<Artist> artists, string name, List<Song> songs)
+
+        public Album(List<Artist> artiest, string songName, List<Song> song) : base(songName)
         {
+            this.Artists = artiest;
+            this.Title = songName;
 
         }
 
-        public List<Artist> ShowArtists() { return Artists; }
+        public List<Artist> ShowArtists()
+        { 
+            foreach(Artist artist in Artists)
+            {
+                Console.WriteLine(artist.name);
+            }
+            return Artists;
+        }
 
-        public override string ToString() { return base.ToString(); }
+        public override string ToString() 
+        {
+            return this.Title;
+        }
 
 
 

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldenSpoty
+namespace GibranSpotivy
 {
     internal interface iPlayable
     {
         public void Play()
         {
-
+            Console.WriteLine("Playing");
         }
         public void Pause()
         {
